@@ -6,16 +6,21 @@ class Changename extends Component{
     constructor(){
         super();
         this.state = {
-            name:'Parminder Singh'
+            name:{
+                firstName:'Parminder',
+                lastName: 'Singh'
+            }
         }
     }
     render(){
         return(
             <div>
-                <label>My Name is {this.state.name}</label>
+                <label>My Name is {this.state.name.firstName} {this.state.name.lastName}</label>
                 <button onClick={
                     () => {
-                        this.setState ({name:'Sam'});
+                        this.setState ({
+                            name:{firstName : 'Sam', lastName : 'Mehta'}
+                        });
                     }
                 }>Change Name</button>
             </div>
