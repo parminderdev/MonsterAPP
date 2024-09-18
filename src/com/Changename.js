@@ -9,20 +9,26 @@ class Changename extends Component{
             name:{
                 firstName:'Parminder',
                 lastName: 'Singh'
-            }
+            },
+            company: 'WEBCODICE'
         }
     }
     render(){
         return(
             <div>
-                <label>My Name is {this.state.name.firstName} {this.state.name.lastName}</label>
-                <button onClick={
-                    () => {
-                        this.setState ({
-                            name:{firstName : 'Sam', lastName : 'Mehta'}
-                        });
-                    }
-                }>Change Name</button>
+                <label>My Name is {this.state.name.firstName} {this.state.name.lastName}, I am working in {this.state.company}</label>
+                <br></br>
+                <button onClick={ ()=> {
+                    this.setState(
+                    ()=>{
+                        return{
+                            name:{firstName:'Sandeep',lastName:'Kaur'}, 
+                            company: 'WEBCODICE LIMITED'
+                    };
+                    
+                    },()=>{console.log(this.state)}
+                )}}
+                    >Change Name</button>
             </div>
         );
     }
