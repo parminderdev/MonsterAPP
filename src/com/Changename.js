@@ -29,6 +29,8 @@ class Changename extends Component{
                     },()=>{console.log(this.state)}
                 )}}
                     >Change Name</button>
+
+                    
             </div>
         );
     }
